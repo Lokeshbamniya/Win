@@ -1,0 +1,97 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    color: #333;
+    padding: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+/* Gift container styling */
+.gift-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gift-icon {
+    width: 100px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+}
+
+/* Animation for the bouncing gift box */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Win message styling */
+.win-message {
+    display: none;
+    text-align: center;
+    background: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Form container styling */
+.form-container {
+    display: none;
+    background: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #ff5f6d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.pending {
+    display: none;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
